@@ -1,6 +1,7 @@
 package org.fasttrackit.util;
 
 import com.sdl.selenium.web.SearchType;
+import com.sdl.selenium.web.WebDriverConfig;
 import com.sdl.selenium.web.WebLocator;
 import com.sdl.selenium.web.button.InputButton;
 import com.sdl.selenium.web.form.SimpleTextField;
@@ -8,6 +9,7 @@ import com.sdl.selenium.web.link.WebLink;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.interactions.Actions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,7 +18,7 @@ import java.util.List;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class TestyUtilitySteps /*extends TestBase*/ {
+public class TestyUtilitySteps extends TestBase {
     private static final Logger LOGGER = LoggerFactory.getLogger(TestyUtilitySteps.class);
 
     @When("^I click on link with text \"([^\"]*)\"$")
@@ -24,7 +26,26 @@ public class TestyUtilitySteps /*extends TestBase*/ {
         WebLink link = new WebLink().setText(text);
         link.assertClick();
     }
-    
+
+    @When("^I mouse over on element with text \"([^\"]*)\"$")
+        public void I_mouse_over_on_element_with_text(String text) {
+                WebLocator element = new WebLocator().setText(text);
+        element.mouseOver();
+            }
+
+    @Then("^I should be on url \"([^\"]*)\"$")
+        public void I_should_be_on_url(String url) {
+                assertThat(WebDriverConfig.getDriver().getCurrentUrl(), is(url));
+            }
+
+    @When("^I focus a link with text \"([^\"]*)\"$")
+    public void I_focus_a_link_with_text(String text)
+    {
+        WebLink link = new WebLink().setText(text);
+        link.focus();
+    }
+
+
     @When("^I click on input button with text \"([^\"]*)\"$")
     public void I_click_on_input_button_with_text(String text) throws Throwable {
         InputButton button = new InputButton().setText(text);
@@ -34,7 +55,7 @@ public class TestyUtilitySteps /*extends TestBase*/ {
     @Then("^I should see an element with text \"([^\"]*)\"$")
     public void assertHaveElementWithText(String text) throws Throwable {
         WebLocator element = new WebLocator().setText(text);
-        //assertThatElementIsReady(element);
+        assertThatElementIsReady(element);
     }
 
     @Then("^I should see following elements with texts \"(.*)\"$")
@@ -72,4 +93,16 @@ public class TestyUtilitySteps /*extends TestBase*/ {
         SimpleTextField field = new SimpleTextField().setId(id).setName("s");
         field.setValue(value);
     }
+
+    @When("^I move to an element with text \"([^\"]*)\" and click on subMenu \"([^\"]*)\"$")
+    public void I_mouse_over_on_element_with_link(String text, String text2) {
+        WebLocator link = new WebLocator().setText(text);
+//link.moveToElement(); // will be this.
+        link.ready();
+        Actions builder = new Actions(driver);
+        builder.moveToElement(link.currentElement).perform();
+        WebLocator subMenu = new WebLocator().setText(text2);
+        subMenu.click();
+    }
 }
+

@@ -2,8 +2,6 @@ package org.fasttrackit.util;
 
 import com.sdl.selenium.web.WebDriverConfig;
 import com.sdl.selenium.web.utils.Utils;
-import cucumber.api.PendingException;
-import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.Dimension;
@@ -34,6 +32,4 @@ public class FlowUtilitySteps extends TestBase {
     public void maximizeBrowser() throws Throwable {
         WebDriverConfig.getDriver().manage().window().maximize();
     }
-
-
 }
