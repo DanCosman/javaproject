@@ -22,8 +22,8 @@ public class LoginSteps extends TestBase {
     }
     
     @When("^I login using \"([^\"]*)\"/\"([^\"]*)\"$")
-    public void I_login_using_(String user, String password) throws Throwable {
-        loginView.login(user, password);
+        public void I_login_using_(String user, String password) throws Throwable {
+            loginView.login(user, password);
     }
 
     @Then("^I click on fake Password field$")
@@ -36,5 +36,11 @@ public class LoginSteps extends TestBase {
         WebLocator error = new WebLocator().setTag("strong").setText("Error:");
         boolean ready = error.ready();
         Assert.assertTrue("Element is not found : " + error, ready);
+    }
+
+    @When("^I place the order with valid details$")
+    public void I_place_the_order_with_valid_details() throws Throwable {
+        loginView.populatePage();
+        loginView.placeOrder();
     }
 }

@@ -97,7 +97,6 @@ public class TestyUtilitySteps extends TestBase {
     @When("^I move to an element with text \"([^\"]*)\" and click on subMenu \"([^\"]*)\"$")
     public void I_mouse_over_on_element_with_link(String text, String text2) {
         WebLocator link = new WebLocator().setText(text);
-//link.moveToElement(); // will be this.
         link.ready();
         Actions builder = new Actions(driver);
         builder.moveToElement(link.currentElement).perform();
