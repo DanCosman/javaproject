@@ -16,6 +16,7 @@ public class CheckoutSteps extends TestBase {
 
     @When("^I place the order with valid details$")
     public void I_place_the_order_with_valid_details() throws Throwable {
+        LOGGER.info("ajunge aici0");
         checkoutView.populatePage();
         checkoutView.placeOrder();
         throw new PendingException();

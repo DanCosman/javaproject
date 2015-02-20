@@ -54,8 +54,9 @@ public class CheckoutView extends WebLocator {
         @FindBy(id = "place_order")
         public WebElement orderButton;
 
-        public void populatePage() throws InterruptedException {
-            firstNameField.sendKeys(RandomStringUtils.randomAlphabetic(6));
+        public void populatePage() throws Throwable {
+            LOGGER.info("ajunge aici");
+            firstNameField.sendKeys("asdafs");
             lastNameField.sendKeys(RandomStringUtils.randomAlphabetic(6));
             addressField.sendKeys(RandomStringUtils.randomAlphabetic(10));
             cityField.sendKeys(RandomStringUtils.randomAlphabetic(10));
