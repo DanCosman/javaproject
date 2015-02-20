@@ -37,10 +37,4 @@ public class LoginSteps extends TestBase {
         boolean ready = error.ready();
         Assert.assertTrue("Element is not found : " + error, ready);
     }
-
-    @When("^I place the order with valid details$")
-    public void I_place_the_order_with_valid_details() throws Throwable {
-        loginView.populatePage();
-        loginView.placeOrder();
-    }
 }
