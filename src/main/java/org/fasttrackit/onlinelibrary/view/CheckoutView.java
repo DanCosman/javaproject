@@ -1,6 +1,7 @@
 package org.fasttrackit.onlinelibrary.view;
 
 import com.sdl.selenium.web.WebLocator;
+import com.sdl.selenium.web.form.SimpleTextField;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,9 +15,7 @@ public class CheckoutView extends WebLocator {
         setClasses("checkout");
     }
 
-
-        @FindBy(id = "billing_first_name")
-        public WebElement firstNameField;
+    public SimpleTextField firstNameField = new SimpleTextField(this).setId("billing_first_name");
 
         @FindBy(id = "billing_last_name")
         public WebElement lastNameField;
@@ -56,7 +55,7 @@ public class CheckoutView extends WebLocator {
 
         public void populatePage() throws Throwable {
             LOGGER.info("ajunge aici");
-            firstNameField.sendKeys("asdafs");
+            firstNameField.setValue(RandomStringUtils.randomAlphabetic(6));
             lastNameField.sendKeys(RandomStringUtils.randomAlphabetic(6));
             addressField.sendKeys(RandomStringUtils.randomAlphabetic(10));
             cityField.sendKeys(RandomStringUtils.randomAlphabetic(10));
