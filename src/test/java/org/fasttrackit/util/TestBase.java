@@ -1,11 +1,11 @@
 package org.fasttrackit.util;
 
-import com.sdl.selenium.web.Browser;
 import com.sdl.selenium.web.WebDriverConfig;
 import com.sdl.selenium.web.WebLocator;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import java.util.concurrent.TimeUnit;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -41,7 +41,7 @@ public abstract class TestBase {
         LOGGER.info("|          Open Selenium Web Driver ");
         LOGGER.info("===============================================================\n");
         if (driver == null) {
-            driver = WebDriverConfig.getWebDriver(Browser.FIREFOX);
+            WebDriverConfig.getWebDriver("src/test/resources/firefox.properties");
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(150, TimeUnit.MILLISECONDS);
 
