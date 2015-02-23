@@ -45,7 +45,6 @@ public class TestyUtilitySteps extends TestBase {
         link.focus();
     }
 
-
     @When("^I click on input button with text \"([^\"]*)\"$")
     public void I_click_on_input_button_with_text(String text) throws Throwable {
         InputButton button = new InputButton().setText(text);

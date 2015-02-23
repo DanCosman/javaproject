@@ -16,6 +16,8 @@ public class CheckoutView extends WebLocator {
     }
 
     public SimpleTextField firstNameField = new SimpleTextField(this).setId("billing_first_name");
+    public SimpleTextField lastName = new SimpleTextField(this).setId("billing_first_name");
+    public SimpleTextField address = new SimpleTextField(this).setId("billing_first_name");
 
         @FindBy(id = "billing_last_name")
         public WebElement lastNameField;
