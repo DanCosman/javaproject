@@ -1,8 +1,8 @@
-package org.fasttrackit.onlinelibrary.account;
+package org.fuel3d.account;
 
 import com.sdl.selenium.web.link.WebLink;
 import cucumber.api.java.en.Given;
-import org.fasttrackit.util.TestBase;
+import org.fuel3d.util.TestBase;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

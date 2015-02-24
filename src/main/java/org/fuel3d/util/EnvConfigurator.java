@@ -1,4 +1,4 @@
-package org.fasttrackit.util;
+package org.fuel3d.util;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -30,7 +30,7 @@ public class EnvConfigurator {
         env = new Properties();
         InputStream stream;
         try {
-            stream = new FileInputStream("./src/main/java/org/fasttrackit/util/" + ENVIRONMENT + ".properties");
+            stream = new FileInputStream("./src/main/java/org/fuel3d/util/" + ENVIRONMENT + ".properties");
             env.load(stream);
         } catch (IOException e) {
             e.printStackTrace();

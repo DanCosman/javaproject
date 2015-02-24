@@ -2,7 +2,7 @@
 Feature: As a Customer I can edit my billing address
 
   Scenario: Prerequisite login
-    Given I open url "http://www.fasttrackit.org/OnlineLibrary/shortcodes/my-account/"
+    Given I open url "http://www.fuel3d.org/OnlineLibrary/shortcodes/my-account/"
     When I login using "admin"/"library"
     Then I should see an element with text "Log Out"
   
@@ -22,7 +22,7 @@ Feature: As a Customer I can edit my billing address
     
     
   Scenario: Open Shipping Address
-    Given I open url "http://www.fasttrackit.org/OnlineLibrary/shortcodes/my-account/"
+    Given I open url "http://www.fuel3d.org/OnlineLibrary/shortcodes/my-account/"
     When I login using "admin"/"library"
     And I click on edit Shipping Address
     Then I should see an element with text "Shipping Address"
