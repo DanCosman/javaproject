@@ -1,5 +1,6 @@
 package org.fuel3d.view;
 
+import com.sdl.bootstrap.form.InputAppend;
 import com.sdl.selenium.web.WebLocator;
 import com.sdl.selenium.web.form.SimpleTextField;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -45,6 +46,7 @@ public class CheckoutView extends WebLocator {
         cvcField.sendKeys("123");
         termsCheckbox.click();
 
+
         switch (option)
         {
             case 1:
@@ -53,6 +55,70 @@ public class CheckoutView extends WebLocator {
             case 2:
                 lastNameField.clear();
                 break;
+            case 3:
+                addressField.clear();
+                break;
+            case 4:
+                cityField.clear();
+                break;
+            case 5:
+                //requires US & Canada Store
+                break;
+            case 6:
+                postcodeField.clear();
+                break;
+            case 7:
+                postcodeField.clear();
+                postcodeField.sendKeys("1010");
+                break;
+            case 8:
+                //select Spain from country dropdown
+                break;
+            case 9:
+                emailField.clear();
+                break;
+            case 10:
+                emailField.clear();
+                emailField.sendKeys("ab.ab");
+                break;
+            case 11:
+                phoneField.clear();
+                break;
+            case 12:
+                phoneField.clear();
+                phoneField.sendKeys("!@#");
+                break;
+            case 13:
+                accountPassword.clear();
+                break;
+            case 14:
+                termsCheckbox.click();
+                break;
+            case 15:
+                cardNumberField.clear();
+                if (cardNumberField.getAttribute("value").equals(cardNumber))
+                cardNumberField.sendKeys(cardNumber);
+                cardExpiryField.clear();
+                cvcField.clear();
+                break;
+            case 16:
+                cardNumberField.clear();;
+                break;
+            case 17:
+                cardNumberField.clear();;
+                cardNumberField.sendKeys("123");
+                break;
+            case 18:
+                cardExpiryField.clear();
+                break;
+            case 19:
+                cardExpiryField.clear();
+                cardExpiryField.sendKeys("12/2009");
+                break;
+            case 20:
+                cvcField.clear();
+                break;
+
             default:
                 break;
         }
