@@ -16,44 +16,18 @@ public class CheckoutView extends WebLocator {
     }
 
     public SimpleTextField firstNameField = new SimpleTextField(this).setId("billing_first_name");
-    public SimpleTextField lastName = new SimpleTextField(this).setId("billing_first_name");
-    public SimpleTextField address = new SimpleTextField(this).setId("billing_first_name");
+    public SimpleTextField lastNameField = new SimpleTextField(this).setId("billing_last_name");
+    public SimpleTextField addressField = new SimpleTextField(this).setId("billing_address_1");
+    public SimpleTextField cityField= new SimpleTextField(this).setId("billing_city");
+    public SimpleTextField postcodeField = new SimpleTextField(this).setId("billing_postcode");
+    public SimpleTextField emailField = new SimpleTextField(this).setId("billing_email");
+    public SimpleTextField phoneField = new SimpleTextField(this).setId("billing_phone");
+    public SimpleTextField accountPassword = new SimpleTextField(this).setId("account_password");
+    public SimpleTextField cardNumberField = new SimpleTextField(this).setId("stripe-card-number");
+    public SimpleTextField cardExpiryField = new SimpleTextField(this).setId("stripe-card-expiry");
+    public SimpleTextField cvcField = new SimpleTextField(this).setId("stripe-card-cvc");
+    public SimpleTextField termsCheckbox = new SimpleTextField(this).setId("terms");
 
-        @FindBy(id = "billing_last_name")
-        public WebElement lastNameField;
-
-        @FindBy(id = "billing_address_1")
-        public WebElement addressField;
-
-        @FindBy(id = "billing_city")
-        public WebElement cityField;
-
-        @FindBy(id = "billing_postcode")
-        public WebElement postcodeField;
-
-        @FindBy(id = "billing_email")
-        public WebElement emailField;
-
-        @FindBy(id = "billing_phone")
-        public WebElement phoneField;
-
-        @FindBy(id = "account_password")
-        public WebElement accountPassword;
-
-        @FindBy(id = "stripe-card-number")
-        public WebElement cardNumberField;
-
-        @FindBy(id = "stripe-card-expiry")
-        public WebElement cardExpiryField;
-
-        @FindBy(id = "stripe-card-cvc")
-        public WebElement cvcField;
-
-        @FindBy(id = "terms")
-        public WebElement termsCheckbox;
-
-        @FindBy(id = "place_order")
-        public WebElement orderButton;
 
         public void populatePage() throws Throwable {
             LOGGER.info("ajunge aici");
@@ -71,12 +45,13 @@ public class CheckoutView extends WebLocator {
                 cardNumberField.sendKeys(cardNumber);
             cardExpiryField.sendKeys("12/2018");
             cvcField.sendKeys("123");
+            termsCheckbox.click();
         }
 
-        public void placeOrder() {
-            if (!termsCheckbox.isSelected())
-                termsCheckbox.click();
-            orderButton.click();
-        }
+//        public void placeOrder() {
+//            if (!termsCheckbox.isSelected())
+//                termsCheckbox.click();
+//                orderButton.click();
+//            }
 
 }
