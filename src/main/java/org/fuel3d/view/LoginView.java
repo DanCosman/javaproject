@@ -1,4 +1,4 @@
-package org.fasttrackit.onlinelibrary.view;
+package org.fuel3d.view;
 
 import com.sdl.selenium.web.SearchType;
 import com.sdl.selenium.web.WebLocator;

@@ -1,4 +1,4 @@
-package org.fasttrackit.util;
+package org.fuel3d.util;
 
 import com.sdl.selenium.web.SearchType;
 import com.sdl.selenium.web.WebDriverConfig;

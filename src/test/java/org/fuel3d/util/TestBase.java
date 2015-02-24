@@ -1,7 +1,8 @@
-package org.fasttrackit.util;
+package org.fuel3d.util;
 
 import com.sdl.selenium.web.WebDriverConfig;
 import com.sdl.selenium.web.WebLocator;
+import org.fuel3d.util.EnvConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;

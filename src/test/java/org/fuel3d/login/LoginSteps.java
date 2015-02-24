@@ -1,11 +1,11 @@
-package org.fasttrackit.onlinelibrary.login;
+package org.fuel3d.login;
 
 import com.sdl.selenium.web.WebLocator;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.fasttrackit.onlinelibrary.view.LoginView;
-import org.fasttrackit.onlinelibrary.view.TopMenuNavigationView;
-import org.fasttrackit.util.TestBase;
+import org.fuel3d.view.LoginView;
+import org.fuel3d.view.TopMenuNavigationView;
+import org.fuel3d.util.TestBase;
 import org.junit.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
