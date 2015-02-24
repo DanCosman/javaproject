@@ -23,6 +23,7 @@ Feature: Checkout Functionality
 #    And I click on input button with text "Calculate Deposit"
 #    Then I wait 3 seconds
 #    And I click on input button with text "Pay Deposit Now"
+  #    And I click on input button with text "Pay Deposit Now"
 
   Scenario: Verify if the user is able to access all links displayed in the main menu
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
