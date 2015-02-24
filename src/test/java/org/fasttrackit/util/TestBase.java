@@ -3,6 +3,8 @@ package org.fasttrackit.util;
 import com.sdl.selenium.web.WebDriverConfig;
 import com.sdl.selenium.web.WebLocator;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,19 +31,15 @@ public abstract class TestBase {
         }
     }
 
-    private static void startSuite() throws Exception {
-        LOGGER.info("===============================================================");
-        LOGGER.info("|          BeforeSuite START-SUITE >> enter                    |");
-        LOGGER.info("=============================================================\n");
-        initSeleniumStart();
-    }
 
-    private static void initSeleniumStart() throws Exception {
-        LOGGER.info("===============================================================");
-        LOGGER.info("|          Open Selenium Web Driver ");
-        LOGGER.info("===============================================================\n");
-        if (driver == null) {
-            WebDriverConfig.getWebDriver("src/test/resources/firefox.properties");
+    private static void startSuite() {
+        try {
+            //   driver = WebDriverConfig.getWebDriver(Browser.FIREFOX);
+
+            EnvConfigurator.setEnviroment();
+  //          InitWebDriver.driver = InitWebDriver.initWebDriver();
+            driver = initWebDriver();
+            WebDriverConfig.init(driver);
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(150, TimeUnit.MILLISECONDS);
 
@@ -49,11 +47,37 @@ public abstract class TestBase {
                 public void run() {
                     if (closeBrowserWhenFinish) {
                         initSeleniumEnd();
+
                     }
                 }
             });
+        } catch (Exception e) {
+            LOGGER.error("Exception when start suite", e);
         }
     }
+
+    private static WebDriver initWebDriver() {
+        if (EnvConfigurator.browser().equals("firefox")) {
+            FirefoxProfile profile = new FirefoxProfile();
+            profile.setAcceptUntrustedCertificates(true);
+            profile.setAssumeUntrustedCertificateIssuer(true);
+            profile.setPreference("webdriver.load.strategy", "unstable");
+            driver = new FirefoxDriver(profile);
+            driver.manage().window().maximize();
+        }/*
+        else if (EnvConfigurator.browser().equals("chrome")){
+            System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
+            driver = new ChromeDriver();
+        }
+        else if (EnvConfigurator.browser().equals("phantomjs")){
+            System.setProperty(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, "Users\\dcosman\\Documents\\fuel3d-tests\\src\\main\\java\\utils\\phantomjs\\phantomjs");
+            driver = new PhantomJSDriver();
+        }*/
+        return driver;
+    }
+
+
+
 
     private static void initSeleniumEnd() {
         LOGGER.info("===============================================================");

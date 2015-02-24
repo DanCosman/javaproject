@@ -14,6 +14,7 @@ import java.io.File;
 public class GlobalHooks {
     private static final Logger LOGGER = LoggerFactory.getLogger(GlobalHooks.class);
 
+
     @After("@screen")
     public void screen(Scenario scenario) {
         String scenarioName = scenario.getName(); // TODO class name
