@@ -27,7 +27,7 @@ public class CheckoutView extends WebLocator {
     public SimpleTextField termsCheckbox = new SimpleTextField(this).setId("terms");
 
 
-    public void populatePage() throws Throwable {
+    public void populatePage(int option) throws Throwable {
         LOGGER.info("ajunge aici");
         firstNameField.setValue(RandomStringUtils.randomAlphabetic(6));
         lastNameField.sendKeys(RandomStringUtils.randomAlphabetic(6));
@@ -44,6 +44,19 @@ public class CheckoutView extends WebLocator {
         cardExpiryField.sendKeys("12/2018");
         cvcField.sendKeys("123");
         termsCheckbox.click();
+
+        switch (option)
+        {
+            case 1:
+                firstNameField.clear();
+                break;
+            case 2:
+                lastNameField.clear();
+                break;
+            default:
+                break;
+        }
+
     }
 
 //        public void placeOrder() {
