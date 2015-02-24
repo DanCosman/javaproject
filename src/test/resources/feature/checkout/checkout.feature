@@ -1,5 +1,5 @@
 @screen
-Feature: Checkout on Fuel-3d
+Feature: Checkout Functionality
 
   Scenario: Verify that a guest is allowed to checkout a product (CO-01)
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
