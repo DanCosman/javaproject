@@ -3,10 +3,10 @@ Feature: Checkout Functionality
 
   Scenario: Verify that a guest is allowed to checkout a product (CO-01)
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
-    And I click on link with text "Store"
+    And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
-    When I place the order with valid details ""
+    When I place the order with valid details "0"
     And I click on link with text "Calculate Deposit"
     And I click on link with text "Pay Deposit + Shipping Now"
     Then I should see an element with text "First Name"
@@ -14,7 +14,7 @@ Feature: Checkout Functionality
 
   Scenario: Verify that guest user is not allowed to checkout without entering his First Name (CO-25)
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
-    And I click on link with text "Store"
+    And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
     When I place the order with valid details "1"
@@ -26,7 +26,7 @@ Feature: Checkout Functionality
 
   Scenario: Verify that guest user is not allowed to checkout without entering his Last Name (CO-26)
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
-    And I click on link with text "Store"
+    And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
     When I place the order with valid details "2"
@@ -38,7 +38,7 @@ Feature: Checkout Functionality
 
   Scenario: Verify that guest user is not allowed to checkout without entering his Address (CO-27)
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
-    And I click on link with text "Store"
+    And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
     When I place the order with valid details "3"
@@ -50,7 +50,7 @@ Feature: Checkout Functionality
 
   Scenario: Verify that guest user is not allowed to checkout without entering his Town / City (CO-28)
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
-    And I click on link with text "Store"
+    And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
     When I place the order with valid details "4"
@@ -72,7 +72,7 @@ Feature: Checkout Functionality
 
   Scenario: Verify that guest user is not allowed to checkout without entering his Postcode (CO-30)
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
-    And I click on link with text "Store"
+    And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
     When I place the order with valid details "6"
@@ -84,7 +84,7 @@ Feature: Checkout Functionality
 
   Scenario: Verify that guest user is not allowed to checkout when entering an invalid Postcode (CO-31)
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
-    And I click on link with text "Store"
+    And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
     When I place the order with valid details "7"
@@ -107,7 +107,7 @@ Feature: Checkout Functionality
 
   Scenario: Verify that guest user is not allowed to checkout without entering an email address (CO-33)
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
-    And I click on link with text "Store"
+    And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
     When I place the order with valid details "9"
@@ -119,7 +119,7 @@ Feature: Checkout Functionality
 
   Scenario: Verify that guest user is not allowed to checkout when entering an invalid email address (CO-34)
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
-    And I click on link with text "Store"
+    And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
     When I place the order with valid details "10"
@@ -131,7 +131,7 @@ Feature: Checkout Functionality
 
   Scenario: Verify that guest user is not allowed to checkout without entering the telephone number (CO-35)
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
-    And I click on link with text "Store"
+    And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
     When I place the order with valid details "11"
@@ -143,7 +143,7 @@ Feature: Checkout Functionality
 
   Scenario: Verify that guest user is not allowed to checkout when entering invalid characters in the Phone field (CO-36)
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
-    And I click on link with text "Store"
+    And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
     When I place the order with valid details "12"
@@ -155,7 +155,7 @@ Feature: Checkout Functionality
 
   Scenario: Verify that guest user is not allowed to checkout without entering the Account Password (CO-37)
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
-    And I click on link with text "Store"
+    And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
     When I place the order with valid details "13"
@@ -167,7 +167,7 @@ Feature: Checkout Functionality
 
   Scenario: Verify that guest user is not allowed to checkout without checking the Terms and Conditions checkbox (CO-38)
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
-    And I click on link with text "Store"
+    And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
     When I place the order with valid details "14"
@@ -178,7 +178,7 @@ Feature: Checkout Functionality
 
   Scenario: Verify that user is not allowed to checkout without entering the card details (CO-39)
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
-    And I click on link with text "Store"
+    And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
     When I place the order with valid details "15"
@@ -190,7 +190,7 @@ Feature: Checkout Functionality
 
   Scenario: Verify that user is not allowed to checkout without entering the Card Number (CO-40)
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
-    And I click on link with text "Store"
+    And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
     When I place the order with valid details "16"
@@ -201,7 +201,7 @@ Feature: Checkout Functionality
 
   Scenario: Verify that user is not allowed to checkout with an invalid Card Number(CO-41)
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
-    And I click on link with text "Store"
+    And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
     When I place the order with valid details "17"
@@ -211,7 +211,7 @@ Feature: Checkout Functionality
 
   Scenario: Verify that user is not allowed to checkout without entering the Expiry Date (CO-42)
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
-    And I click on link with text "Store"
+    And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
     When I place the order with valid details "18"
@@ -221,7 +221,7 @@ Feature: Checkout Functionality
 
   Scenario: Verify that user is not allowed to checkout with an Expiry date set in the past (CO-43)
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
-    And I click on link with text "Store"
+    And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
     When I place the order with valid details "19"
@@ -231,7 +231,7 @@ Feature: Checkout Functionality
 
   Scenario: Verify that user is not allowed to checkout without entering the Card Code (CO-44)
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
-    And I click on link with text "Store"
+    And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
     When I place the order with valid details "20"
@@ -263,7 +263,7 @@ Feature: Checkout Functionality
     Then I should see an element with text "Posted on "
     And I click on link with text "Support"
     Then I should see an element with text "Fuel3D Support"
-    And I click on link with text "Store"
+    And I click on link with text "Fuel3D Store"
     Then I should see an element with text "Fuel3D Store"
 
   Scenario: Verify that user is redirected to the homepage when he clicks on the Home link

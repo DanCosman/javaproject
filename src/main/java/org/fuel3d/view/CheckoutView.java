@@ -1,6 +1,5 @@
 package org.fuel3d.view;
 
-import com.sdl.bootstrap.form.InputAppend;
 import com.sdl.selenium.web.WebLocator;
 import com.sdl.selenium.web.form.SimpleTextField;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -22,6 +21,8 @@ public class CheckoutView extends WebLocator {
     public SimpleTextField emailField = new SimpleTextField(this).setId("billing_email");
     public SimpleTextField phoneField = new SimpleTextField(this).setId("billing_phone");
     public SimpleTextField accountPassword = new SimpleTextField(this).setId("account_password");
+    public SimpleTextField selectDirectBank = new SimpleTextField(this).setId("payment_method_bacs");
+    public SimpleTextField selectStripeCard = new SimpleTextField(this).setId("payment_method_stripe");
     public SimpleTextField cardNumberField = new SimpleTextField(this).setId("stripe-card-number");
     public SimpleTextField cardExpiryField = new SimpleTextField(this).setId("stripe-card-expiry");
     public SimpleTextField cvcField = new SimpleTextField(this).setId("stripe-card-cvc");
@@ -39,6 +40,10 @@ public class CheckoutView extends WebLocator {
         phoneField.sendKeys(RandomStringUtils.randomNumeric(8));
         accountPassword.sendKeys("password");
         String cardNumber = "4111111111111111";
+        selectDirectBank.click();
+        Thread.sleep(2000);
+        selectStripeCard.click();
+        Thread.sleep(4000);
         cardNumberField.sendKeys(cardNumber);
         if (!cardNumberField.getAttribute("value").equals(cardNumber))
             cardNumberField.sendKeys(cardNumber);
@@ -49,6 +54,9 @@ public class CheckoutView extends WebLocator {
 
         switch (option)
         {
+            case 0:
+                firstNameField.clear();
+                break;
             case 1:
                 firstNameField.clear();
                 break;
