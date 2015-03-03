@@ -6,7 +6,6 @@ Feature: Checkout Functionality
     And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
-    And I wait 3 seconds
     When I place an order with valid details "0"
     And I click on link with text "Calculate Deposit"
     And I click on link with text "Pay Deposit + Shipping Now"
@@ -18,7 +17,6 @@ Feature: Checkout Functionality
     And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
-    And I wait 1 seconds
     When I place an order with valid details "1"
     And I click on link with text "Calculate Deposit"
     And I click on link with text "Pay Deposit + Shipping Now"
@@ -31,7 +29,6 @@ Feature: Checkout Functionality
     And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
-    And I wait 1 seconds
     When I place an order with valid details "2"
     And I click on link with text "Calculate Deposit"
     And I click on link with text "Pay Deposit + Shipping Now"
@@ -44,7 +41,6 @@ Feature: Checkout Functionality
     And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
-    And I wait 1 seconds
     When I place an order with valid details "3"
     And I click on link with text "Calculate Deposit"
     And I click on link with text "Pay Deposit + Shipping Now"
@@ -57,7 +53,6 @@ Feature: Checkout Functionality
     And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
-    And I wait 1 seconds
     When I place an order with valid details "4"
     And I click on link with text "Calculate Deposit"
     And I click on link with text "Pay Deposit + Shipping Now"
@@ -80,7 +75,6 @@ Feature: Checkout Functionality
     And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
-    And I wait 1 seconds
     When I place an order with valid details "6"
     And I click on link with text "Calculate Deposit"
     And I click on link with text "Pay Deposit + Shipping Now"
@@ -93,7 +87,6 @@ Feature: Checkout Functionality
     And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
-    And I wait 1 seconds
     When I place an order with valid details "7"
     And I click on link with text "Calculate Deposit"
     And I click on link with text "Pay Deposit + Shipping Now"
@@ -117,7 +110,6 @@ Feature: Checkout Functionality
     And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
-    And I wait 1 seconds
     When I place an order with valid details "9"
     And I click on link with text "Calculate Deposit"
     And I click on link with text "Pay Deposit + Shipping Now"
@@ -130,7 +122,6 @@ Feature: Checkout Functionality
     And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
-    And I wait 1 seconds
     When I place an order with valid details "10"
     And I click on link with text "Calculate Deposit"
     And I click on link with text "Pay Deposit + Shipping Now"
@@ -143,7 +134,6 @@ Feature: Checkout Functionality
     And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
-    And I wait 1 seconds
     When I place an order with valid details "11"
     And I click on link with text "Calculate Deposit"
     And I click on link with text "Pay Deposit + Shipping Now"
@@ -156,7 +146,6 @@ Feature: Checkout Functionality
     And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
-    And I wait 1 seconds
     When I place an order with valid details "12"
     And I click on link with text "Calculate Deposit"
     And I click on link with text "Pay Deposit + Shipping Now"
@@ -169,7 +158,6 @@ Feature: Checkout Functionality
     And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
-    And I wait 1 seconds
     When I place an order with valid details "13"
     And I click on link with text "Calculate Deposit"
     And I click on link with text "Pay Deposit + Shipping Now"
@@ -182,7 +170,6 @@ Feature: Checkout Functionality
     And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
-    And I wait 1 seconds
     When I place an order with valid details "14"
     And I click on link with text "Calculate Deposit"
     And I click on link with text "Pay Deposit + Shipping Now"
@@ -194,7 +181,6 @@ Feature: Checkout Functionality
     And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
-    And I wait 1 seconds
     When I place an order with valid details "15"
     And I click on link with text "Calculate Deposit"
     And I click on link with text "Pay Deposit + Shipping Now"
@@ -207,7 +193,6 @@ Feature: Checkout Functionality
     And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
-    And I wait 1 seconds
     When I place an order with valid details "16"
     And I click on link with text "Calculate Deposit"
     And I click on link with text "Pay Deposit + Shipping Now"
@@ -219,7 +204,6 @@ Feature: Checkout Functionality
     And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
-    And I wait 1 seconds
     When I place an order with valid details "17"
     And I click on link with text "Calculate Deposit"
     And I click on link with text "Pay Deposit + Shipping Now"
@@ -230,7 +214,6 @@ Feature: Checkout Functionality
     And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
-    And I wait 1 seconds
     When I place an order with valid details "18"
     And I click on link with text "Calculate Deposit"
     And I click on link with text "Pay Deposit + Shipping Now"
@@ -241,7 +224,6 @@ Feature: Checkout Functionality
     And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
-    And I wait 1 seconds
     When I place an order with valid details "19"
     And I click on link with text "Calculate Deposit"
     And I click on link with text "Pay Deposit + Shipping Now"
@@ -252,7 +234,6 @@ Feature: Checkout Functionality
     And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
-    And I wait 1 seconds
     When I place an order with valid details "20"
     And I click on link with text "Calculate Deposit"
     And I click on link with text "Pay Deposit + Shipping Now"
