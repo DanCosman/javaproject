@@ -5,8 +5,8 @@ Feature: Checkout Functionality
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
     And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
-    And I wait 5 seconds
     And I click on input button with text "Proceed to Checkout"
+    And I wait 5 seconds
     When I place an order with valid details "0"
     And I click on link with text "Calculate Deposit"
     And I click on link with text "Pay Deposit + Shipping Now"
