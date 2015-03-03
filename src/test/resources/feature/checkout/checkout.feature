@@ -6,7 +6,7 @@ Feature: Checkout Functionality
     And I click on link with text "Fuel3D Store"
     And I click on link with text "Add to cart"
     And I click on input button with text "Proceed to Checkout"
-    And I wait 1 seconds
+    And I wait 3 seconds
     When I place an order with valid details "0"
     And I click on link with text "Calculate Deposit"
     And I click on link with text "Pay Deposit + Shipping Now"
