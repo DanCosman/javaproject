@@ -41,9 +41,9 @@ public class CheckoutView extends WebLocator {
         accountPassword.sendKeys("password");
         String cardNumber = "4111111111111111";
         selectDirectBank.click();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         selectStripeCard.click();
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         cardNumberField.sendKeys(cardNumber);
         if (!cardNumberField.getAttribute("value").equals(cardNumber))
             cardNumberField.sendKeys(cardNumber);
