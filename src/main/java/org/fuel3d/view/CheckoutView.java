@@ -30,7 +30,6 @@ public class CheckoutView extends WebLocator {
 
 
     public void populatePage(int option) throws Throwable {
-        LOGGER.info("ajunge aici");
         firstNameField.setValue(RandomStringUtils.randomAlphabetic(6));
         lastNameField.sendKeys(RandomStringUtils.randomAlphabetic(6));
         addressField.sendKeys(RandomStringUtils.randomAlphabetic(10));

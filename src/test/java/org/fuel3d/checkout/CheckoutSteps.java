@@ -15,7 +15,6 @@ public class CheckoutSteps extends TestBase {
 
     @When("^I place an order with valid details \"([^\"]*)\"$")
     public void I_place_an_order_with_valid_details(int option) throws Throwable {
-        LOGGER.info("ajunge aici0");
         checkoutView.populatePage(option);
     }
 }
