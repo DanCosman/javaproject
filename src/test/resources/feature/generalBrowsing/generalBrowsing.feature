@@ -10,7 +10,7 @@ Then I should see an element with text "Meet SCANIFY"
 And I click on link with text "News/Blog"
 Then I should see an element with text "Posted on "
 And I click on link with text "Support"
-Then I should see an element with text "Fuel3D Support"
+Then I should see an element with text "Support"
 And I click on link with text "Fuel3D Store"
 Then I should see an element with text "Fuel3D Store"
 
