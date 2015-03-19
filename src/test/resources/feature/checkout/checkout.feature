@@ -9,7 +9,9 @@ Feature: Checkout Functionality
     When I place an order with valid details "0"
     And I click on link with text "Calculate Deposit"
     And I click on link with text "Pay Deposit + Shipping Now"
-    Then I should see an element with text "First Name"
+    Then I should see an element with text "Thank you. Your order has been received."
+    And I should see my transaction in TradeGecko
+    And I should see my transaction in Stripe
 
 
   Scenario: Verify that guest user is not allowed to checkout without entering his First Name (CO-25)

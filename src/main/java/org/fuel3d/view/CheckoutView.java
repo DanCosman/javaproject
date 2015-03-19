@@ -54,7 +54,6 @@ public class CheckoutView extends WebLocator {
         switch (option)
         {
             case 0:
-                firstNameField.clear();
                 break;
             case 1:
                 firstNameField.clear();
