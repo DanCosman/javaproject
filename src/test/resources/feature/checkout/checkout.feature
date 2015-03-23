@@ -279,4 +279,4 @@ Feature: Checkout Functionality
     And I click on input button with text "Log In"
     And I open url "http://deplastic.ro/wp-admin/post-new.php?post_type=product"
     And I click on link with text "Set featured image"
-And I click on
+#And I click on
