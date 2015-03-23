@@ -255,5 +255,28 @@ Feature: Checkout Functionality
 #    And I click on input button with text "Pay Deposit Now"
   #    And I click on input button with text "Pay Deposit Now"
 
+  Scenario: Distributor portal
+    Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
+    And I mouse over on element with text "Fuel3D Store"
+    And I click on link with text "Distributor portal"
+    When I type "Distributor" into "Email Address *" field
+    When I type "123456" into "Password *" field
+    And I click on button with text "Login"
 
+    
+  Scenario: NumGuess
+    Given I open url "http://54.93.82.48:8080/NumGuess/"
+    Then I enter number until I guess
+    #And I type into field the value "1"
+    #And I click on link with text "It could be 1"
+    #And I click on input button with text "guessButton"
+    #Then I should see an element with text "WRONG, Try a Higher one!"
 
+  Scenario: UploadImages
+    Given I open url "http://deplastic.ro/wp-admin"
+    And I type "admin" into field with id "user_login"
+    And I type "myRcW93X6JNY%" into field with id "user_pass"
+    And I click on input button with text "Log In"
+    And I open url "http://deplastic.ro/wp-admin/post-new.php?post_type=product"
+    And I click on link with text "Set featured image"
+And I click on
