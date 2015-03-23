@@ -262,6 +262,7 @@ Feature: Checkout Functionality
     When I type "Distributor" into "Email Address *" field
     When I type "123456" into "Password *" field
     And I click on button with text "Login"
+    And I click on link with deep text "Place an order"
 
     
   Scenario: NumGuess

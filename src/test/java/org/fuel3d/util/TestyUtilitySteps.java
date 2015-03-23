@@ -33,6 +33,12 @@ public class TestyUtilitySteps extends TestBase {
         link.assertClick();
     }
 
+    @When("^I click on link with deep text \"([^\"]*)\"$")
+    public void I_click_on_link_with_deep_text(String text) {
+        WebLink link = new WebLink().setText(text, SearchType.EQUALS, SearchType.DEEP_CHILD_NODE);
+        link.assertClick();
+    }
+
     @When("^I mouse over on element with text \"([^\"]*)\"$")
         public void I_mouse_over_on_element_with_text(String text) {
                 WebLocator element = new WebLocator().setText(text);
