@@ -3,9 +3,9 @@ package org.fuel3d.login;
 import com.sdl.selenium.web.WebLocator;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.fuel3d.util.TestBase;
 import org.fuel3d.view.LoginView;
 import org.fuel3d.view.TopMenuNavigationView;
-import org.fuel3d.util.TestBase;
 import org.junit.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,4 +37,5 @@ public class LoginSteps extends TestBase {
         boolean ready = error.ready();
         Assert.assertTrue("Element is not found : " + error, ready);
     }
+
 }

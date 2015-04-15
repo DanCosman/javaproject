@@ -1,7 +1,7 @@
 package org.fuel3d.view;
 
 import com.sdl.selenium.web.WebLocator;
-import com.sdl.selenium.web.form.SimpleTextField;
+import com.sdl.selenium.web.form.TextField;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,20 +13,20 @@ public class CheckoutView extends WebLocator {
         setClasses("checkout");
     }
 
-    public SimpleTextField firstNameField = new SimpleTextField(this).setId("billing_first_name");
-    public SimpleTextField lastNameField = new SimpleTextField(this).setId("billing_last_name");
-    public SimpleTextField addressField = new SimpleTextField(this).setId("billing_address_1");
-    public SimpleTextField cityField= new SimpleTextField(this).setId("billing_city");
-    public SimpleTextField postcodeField = new SimpleTextField(this).setId("billing_postcode");
-    public SimpleTextField emailField = new SimpleTextField(this).setId("billing_email");
-    public SimpleTextField phoneField = new SimpleTextField(this).setId("billing_phone");
-    public SimpleTextField accountPassword = new SimpleTextField(this).setId("account_password");
-    public SimpleTextField selectDirectBank = new SimpleTextField(this).setId("payment_method_bacs");
-    public SimpleTextField selectStripeCard = new SimpleTextField(this).setId("payment_method_stripe");
-    public SimpleTextField cardNumberField = new SimpleTextField(this).setId("stripe-card-number");
-    public SimpleTextField cardExpiryField = new SimpleTextField(this).setId("stripe-card-expiry");
-    public SimpleTextField cvcField = new SimpleTextField(this).setId("stripe-card-cvc");
-    public SimpleTextField termsCheckbox = new SimpleTextField(this).setId("terms");
+    public TextField firstNameField = new TextField(this).setId("billing_first_name");
+    public TextField lastNameField = new TextField(this).setId("billing_last_name");
+    public TextField addressField = new TextField(this).setId("billing_address_1");
+    public TextField cityField= new TextField(this).setId("billing_city");
+    public TextField postcodeField = new TextField(this).setId("billing_postcode");
+    public TextField emailField = new TextField(this).setId("billing_email");
+    public TextField phoneField = new TextField(this).setId("billing_phone");
+    public TextField accountPassword = new TextField(this).setId("account_password");
+    public TextField selectDirectBank = new TextField(this).setId("payment_method_bacs");
+    public TextField selectStripeCard = new TextField(this).setId("payment_method_stripe");
+    public TextField cardNumberField = new TextField(this).setId("stripe-card-number");
+    public TextField cardExpiryField = new TextField(this).setId("stripe-card-expiry");
+    public TextField cvcField = new TextField(this).setId("stripe-card-cvc");
+    public TextField termsCheckbox = new TextField(this).setId("terms");
 
 
     public void populatePage(int option) throws Throwable {

@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "html:target/cucumber","json:target/jsonReports/LoginTest.json"},
         glue = {
                 "org.fuel3d.util",
-                "org.fuel3d.onlinelibrary.login"
+                "org.fuel3d.login"
         },
         features = {
                 "src/test/resources/feature/login/login.feature"
