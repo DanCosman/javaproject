@@ -12,7 +12,6 @@ import org.slf4j.LoggerFactory;
 
 public class LoginSteps extends TestBase {
     private static final Logger LOGGER = LoggerFactory.getLogger(LoginSteps.class);
-    
     private TopMenuNavigationView topMenuNavigation = new TopMenuNavigationView();
     private LoginView loginView = new LoginView();
 
@@ -37,5 +36,4 @@ public class LoginSteps extends TestBase {
         boolean ready = error.ready();
         Assert.assertTrue("Element is not found : " + error, ready);
     }
-
 }
