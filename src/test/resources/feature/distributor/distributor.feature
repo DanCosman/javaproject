@@ -17,7 +17,7 @@ Feature: Distributor functionality
     When I type "distributor" on textarea with id "email"
     When I type "wrongpassword" on textarea with id "password"
     And I click on button with text "Login"
-    Then I should see an element with text "Incorrect details entered, please enter a valid username and/or password"
+    Then I should see an element with text "Forgot / don't know your password?"
 
   Scenario: Login failed for distributor because of wrong Email address
     Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com"
@@ -26,14 +26,14 @@ Feature: Distributor functionality
     When I type "wrong email address" on textarea with id "email"
     When I type "123456" on textarea with id "password"
     And I click on button with text "Login"
-    Then I should see an element with text "Incorrect details entered, please enter a valid username and/or password"
-    And I wait 10 seconds
+    Then I should see an element with text "Forgot / don't know your password?"
 
-  Scenario: Login failed for distributor because he forghet to complete mandatory fields and press Login
+  Scenario: Login failed for distributor because he forgot to complete mandatory fields and press Login
     Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com"
     And I mouse over on element with text "Fuel3D Store"
     And I click on link with text "Distributor portal"
     And I click on button with text "Login"
+    Then I should see an element with text "Field cannot be blank"
 
   Scenario: Forgot password as a distributor
     Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com"
@@ -42,6 +42,7 @@ Feature: Distributor functionality
     And I click on link with text "Forgot / don't know your password?"
     And I type "vescan.remus30+1@gmail.com" into field with id "user_login"
     And I click on input button with text "Get New Password"
+    Then I should see an element with text "Request your password"
 
   Scenario: Applying to be a distributor
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
@@ -50,11 +51,12 @@ Feature: Distributor functionality
     And I click on link with text "Apply To Become A Distributor"
     And I type "Remus" into "First Name *" field
     And I type "Vescan" into "Surname *" field
-    When I type "abc@gmail.com" into field with id "email2"
+    When I type "vescan.remus30+401@gmail.com" into field with id "email2"
     And I type "remussic" into field with id "password2"
     And I select "Cuba" from dropdown menu with name "country"
     And I type "un text cu orice " on textarea with id "why"
     And I click on button with text "Apply"
+    And I wait 50 seconds
 
   Scenario: A user that applies to become a distributor leaves empty (the) First Name field
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
@@ -62,11 +64,12 @@ Feature: Distributor functionality
     And I click on link with text "Distributor portal"
     And I click on link with text "Apply To Become A Distributor"
     And I type "Vescan" into "Surname *" field
-    When I type "abc@gmail.com" into field with id "email2"
+    When I type "vescan.remus30+401@gmail.com" into field with id "email2"
     And I type "remussic" into field with id "password2"
     And I select "Cuba" from dropdown menu with name "country"
     And I type "un text cu orice " on textarea with id "why"
     And I click on button with text "Apply"
+    Then I should see an element with text "Field cannot be blank"
 
   Scenario:  A user that applies to become a distributor leaves empty (the) Surname field
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
@@ -79,7 +82,7 @@ Feature: Distributor functionality
     And I select "Cuba" from dropdown menu with name "country"
     And I type "un text cu orice " on textarea with id "why"
     And I click on button with text "Apply"
-
+    Then I should see an element with text "Field cannot be blank"
 
   Scenario: A user that applies to become a distributor leaves empty (the) Email address field
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
@@ -92,7 +95,7 @@ Feature: Distributor functionality
     And I select "Cuba" from dropdown menu with name "country"
     And I type "un text cu orice " on textarea with id "why"
     And I click on button with text "Apply"
-    And I wait 10 seconds
+    Then I should see an element with text "You have not given a correct e-mail address"
 
   Scenario: A user that applies to become a distributor leaves empty (the) Password  field
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
@@ -105,6 +108,7 @@ Feature: Distributor functionality
     And I select "Cuba" from dropdown menu with name "country"
     And I type "un text cu orice " on textarea with id "why"
     And I click on button with text "Apply"
+    Then I should see an element with text "The input value is shorter than 6 characters"
 
   Scenario: A user that applies to become a distributor leaves empty (the) Country field
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
@@ -117,6 +121,7 @@ Feature: Distributor functionality
     And I type "remussic" into field with id "password2"
     And I type "un text cu orice " on textarea with id "why"
     And I click on button with text "Apply"
+    Then I should see an element with text "Field cannot be blank"
 
   Scenario: A user that applies to become a distributor leaves empty (the) DESCRIBE WHY YOU WANT TO BE A DISTRIBUTOR  field
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
@@ -129,6 +134,7 @@ Feature: Distributor functionality
     And I type "remussic" into field with id "password2"
     And I select "Cuba" from dropdown menu with name "country"
     And I click on button with text "Apply"
+    Then I should see an element with text "The input value must be between 1-250 characters"
 
   Scenario: Applying to be a distributor and leaves empty all fields
     Given I open url "https://dev:J4g^SqXtk%3@staging.fuel-3d.com/"
@@ -136,6 +142,11 @@ Feature: Distributor functionality
     And I click on link with text "Distributor portal"
     And I click on link with text "Apply To Become A Distributor"
     And I click on button with text "Apply"
+    Then I should see an element with text "Field cannot be blank"
+    And I should see an element with text "You have not given a correct e-mail address"
+    And I should see an element with text "The input value is shorter than 6 characters"
+    And I should see an element with text "The input value must be between 1-250 characters"
+
 
   Scenario: Place an order as a distributor
     Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com"
@@ -163,6 +174,7 @@ Feature: Distributor functionality
     And I click on terms checkbox
     When I click on link with text "Calculate Deposit"
     When I click on link with text "Pay Deposit + Shipping Now"
+    And I wait 40 seconds
 
   Scenario: Place an order as a distributor and leaves empty First Name field
     Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com"
@@ -189,7 +201,7 @@ Feature: Distributor functionality
     And I click on terms checkbox
     When I click on link with text "Calculate Deposit"
     When I click on link with text "Pay Deposit + Shipping Now"
-    And I wait 10 seconds
+    Then I should see an element with text "Field cannot be blank"
 
   Scenario: Place a order as a distributor and leaves  empty Last Name field
     Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com"
@@ -216,7 +228,7 @@ Feature: Distributor functionality
     And I click on terms checkbox
     When I click on link with text "Calculate Deposit"
     When I click on link with text "Pay Deposit + Shipping Now"
-    And I wait 10 seconds
+    Then I should see an element with text "Field cannot be blank"
 
   Scenario: Place a order as a distributor  and leaves  empty Address field
     Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com"
@@ -243,6 +255,7 @@ Feature: Distributor functionality
     And I click on terms checkbox
     When I click on link with text "Calculate Deposit"
     When I click on link with text "Pay Deposit + Shipping Now"
+    Then I should see an element with text "Field cannot be blank"
 
   Scenario: Place a order as a distributor and leaves empty Town / City field
     Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com"
@@ -269,6 +282,8 @@ Feature: Distributor functionality
     And I click on terms checkbox
     When I click on link with text "Calculate Deposit"
     When I click on link with text "Pay Deposit + Shipping Now"
+    Then I should see an element with text "Field cannot be blank"
+    And I wait 15 seconds
 
   Scenario: Place a order as a distributor  and leaves empty Postcode field
     Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com"
@@ -295,6 +310,7 @@ Feature: Distributor functionality
     And I click on terms checkbox
     When I click on link with text "Calculate Deposit"
     When I click on link with text "Pay Deposit + Shipping Now"
+    Then I should see an element with text "Field cannot be blank"
 
   Scenario: Place a order as a distributor and leaves empty Phone field
     Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com"
@@ -321,6 +337,8 @@ Feature: Distributor functionality
     And I click on terms checkbox
     When I click on link with text "Calculate Deposit"
     When I click on link with text "Pay Deposit + Shipping Now"
+    Then I should see an element with text "The input value was not a correct number"
+
 
   Scenario: Place a order as a distributor and leaves empty Card Number field
     Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com"
@@ -347,6 +365,7 @@ Feature: Distributor functionality
     And I click on terms checkbox
     When I click on link with text "Calculate Deposit"
     When I click on link with text "Pay Deposit + Shipping Now"
+    Then I should see an element with text "This card number looks invalid."
 
   Scenario: Place a order as a distributor and leaves empty Expiry (MM/YY) field
     Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com"
@@ -373,7 +392,8 @@ Feature: Distributor functionality
     And I click on terms checkbox
     When I click on link with text "Calculate Deposit"
     When I click on link with text "Pay Deposit + Shipping Now"
-    And  I wait 20 seconds
+    Then I should see an element with text "Your card's expiration year is invalid."
+
 
   Scenario: Place a order as a distributor and leaves empty Card Code field
     Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com"
@@ -400,7 +420,7 @@ Feature: Distributor functionality
     And I click on terms checkbox
     When I click on link with text "Calculate Deposit"
     When I click on link with text "Pay Deposit + Shipping Now"
-    And I wait 20 seconds
+    Then I should see an element with text "Your card's security code is invalid."
 
   Scenario: Place a order as a distributor and  terms checkbox is not checked
     Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com"
@@ -427,6 +447,7 @@ Feature: Distributor functionality
     And I type "1234" into field with id "stripe-card-cvc"
     When I click on link with text "Calculate Deposit"
     When I click on link with text "Pay Deposit + Shipping Now"
+    Then I should see an element with text "You must accept our Terms & Conditions."
 
   Scenario: Place a order as a distributor and leave all fields empty
     Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com"

@@ -10,7 +10,7 @@ Feature: Contact us functionality
     And I type "vescan.remus30@gmail.com" into field with name "your-email"
     And I type "any word" on textarea with name "your-message"
     And I click on input button with text "Send"
-    Then I wait 20 seconds
+    Then I should see an element with text "Your message was sent successfully. Thanks."
 
   Scenario: Wrong Email address
     Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com"
@@ -21,6 +21,7 @@ Feature: Contact us functionality
     And I type "wrong Email address" into field with name "your-email"
     And I type "any word" on textarea with name "your-message"
     And I click on input button with text "Send"
+    Then I wait 45 seconds
 
   Scenario:  User forgot to write the name
     Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com"
@@ -58,8 +59,3 @@ Feature: Contact us functionality
     And I click on input button with text "Send"
     Then I wait 20 seconds
 
-  Scenario: User not write mandatroy fields only he click on "Send"
-    Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com"
-    And I click on link with css "h6"
-    And I click on input button with text "Send"
-    Then I wait 20 seconds
