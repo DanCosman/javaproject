@@ -2,7 +2,7 @@
 Feature: My account functionality
 
   Scenario: My account loggin succesful
-    Given I open url "https://dev:J4g^SqXtk%3@http://dev.fuel-3d.com/usa/shop/"
+    Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com/usa/shop/"
     And I mouse over on element with text "Store"
     And I click on link with text "My Account"
     And I type "vescanremus30" into field with name "username"
@@ -11,7 +11,7 @@ Feature: My account functionality
     Then I should see an element with text "Sign out"
     
   Scenario: Login failed because of wrong username or email address
-    Given I open url "https://dev:J4g^SqXtk%3@http://dev.fuel-3d.com/usa/shop/"
+    Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com/usa/shop/"
     And I mouse over on element with text "Store"
     And I click on link with text "My Account"
     And I type "wrong username" into field with name "username"
@@ -20,7 +20,7 @@ Feature: My account functionality
     And I wait 30 seconds
 
   Scenario: Login failed because of wrong password
-    Given I open url "https://dev:J4g^SqXtk%3@http://dev.fuel-3d.com/usa/shop/"
+    Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com/usa/shop/"
     And I mouse over on element with text "Store"
     And I click on link with text "My Account"
     And I type "vescanremus30" into field with name "username"
@@ -29,7 +29,7 @@ Feature: My account functionality
     And I wait 30 seconds
 
   Scenario: Login failed because of wrong username
-    Given I open url "https://dev:J4g^SqXtk%3@http://dev.fuel-3d.com/usa/shop/"
+    Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com/usa/shop/"
     And I mouse over on element with text "Store"
     And I click on link with text "My Account"
     And I type "wrong username" into field with name "username"
@@ -38,7 +38,7 @@ Feature: My account functionality
     And I wait 30 seconds
 
   Scenario: Login failed because the user leaves empty mandatory fields
-    Given I open url "https://dev:J4g^SqXtk%3@http://dev.fuel-3d.com/usa/shop/"
+    Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com/usa/shop/"
     And I mouse over on element with text "Store"
     And I click on link with text "My Account"
     And I click on input button with text "Login"
@@ -46,7 +46,7 @@ Feature: My account functionality
 
 
   Scenario: Back to Main Site from my account
-    Given I open url "https://dev:J4g^SqXtk%3@http://dev.fuel-3d.com/usa/shop/"
+    Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com/usa/shop/"
     And I mouse over on element with text "Store"
     And I click on link with text "My Account"
     And I type "vescanremus30" into field with name "username"
@@ -57,7 +57,7 @@ Feature: My account functionality
 
 
   Scenario: My account and checkout
-    Given I open url "https://dev:J4g^SqXtk%3@http://dev.fuel-3d.com/usa/shop/"
+    Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com/usa/shop/"
     And I mouse over on element with text "Store"
     And I click on link with text "My Account"
     And I type "vescanremus30" into field with name "username"
@@ -90,7 +90,7 @@ Feature: My account functionality
     And I wait 50 seconds
 
   Scenario: Checkout from my account cart
-    Given I open url "https://dev:J4g^SqXtk%3@http://dev.fuel-3d.com/usa/shop/"
+    Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com/usa/shop/"
     And I mouse over on element with text "Store"
     And I click on link with text "My Account"
     And I type "vescanremus30" into field with name "username"

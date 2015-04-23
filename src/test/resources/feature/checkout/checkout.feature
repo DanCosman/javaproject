@@ -294,7 +294,7 @@ Feature: Checkout Functionality
 #    Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com"
 #    And I mouse over on element with text "Fuel3D Store"
 #    And I click on link with text "US & Canada Store"
-    Given I open url "https://dev:J4g^SqXtk%3@http://dev.fuel-3d.com/usa/shop/"
+    Given I open url "https://dev:J4g^SqXtk%3@dev.fuel-3d.com/usa/shop/"
     And I mouse over on element with text "Store"
     And I click on link with text "Checkout"
     And I click on link with text "Return To Shop"
